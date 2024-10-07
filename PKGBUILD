@@ -43,7 +43,7 @@ prepare() {
     # Alteração: Ajuste para a nova estrutura de diretórios
     mkdir -p "${srcdir}/sources/wine/programs/winedbg"
     cp "${srcdir}/distversion.h" "${srcdir}/sources/wine/programs/winedbg/distversion.h"
-    #rm -rf build-{32,64}
+    rm -rf build-{32,64}
     mkdir -p build-{32,64}
 }
 
