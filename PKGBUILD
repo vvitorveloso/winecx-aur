@@ -43,7 +43,7 @@ prepare() {
     # Alteração: Ajuste para a nova estrutura de diretórios
     mkdir -p "${srcdir}/sources/wine/programs/winedbg"
     cp "${srcdir}/distversion.h" "${srcdir}/sources/wine/programs/winedbg/distversion.h"
-    rm -rf build-{32,64}
+    #rm -rf build-{32,64}
     mkdir -p build-{32,64}
 }
 
@@ -114,8 +114,8 @@ package() {
     # Create symbolic links in /usr/bin
     install -d "${pkgdir}/usr/bin"
     
-    install -D -m755 "${srcdir}/winecx" -t "${pkgdir}/usr/bin/winecx"
-    install -D -m755 "${srcdir}/winecx64" -t "${pkgdir}/usr/bin/winecx64"
+    install -D -m755 "${srcdir}/winecx" -t "${pkgdir}/usr/bin/"
+    install -D -m755 "${srcdir}/winecx64" -t "${pkgdir}/usr/bin/"
 
     #ln -s /opt/winecx/bin/wine "${pkgdir}/usr/bin/winecx"
     #ln -s /opt/winecx/bin/wine64 "${pkgdir}/usr/bin/winecx64"
